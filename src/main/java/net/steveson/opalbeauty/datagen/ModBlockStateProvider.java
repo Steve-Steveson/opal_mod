@@ -2,7 +2,6 @@ package net.steveson.opalbeauty.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -18,12 +17,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        blockWithItem(ModBlocks.OPAL_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_OPAL_ORE);
+        blockWithItem(ModBlocks.END_OPAL_ORE);
         blockWithItem(ModBlocks.OPAL_BLOCK);
-
-
-
-//        stairsBlock(((StairBlock) ModBlocks.QUARTZ_BRICK_STAIRS.get()), blockTexture(Blocks.QUARTZ_BRICKS));
-//        slabBlock(((SlabBlock) ModBlocks.QUARTZ_BRICK_SLAB.get()), blockTexture(Blocks.QUARTZ_BRICKS), blockTexture(Blocks.QUARTZ_BRICKS));
+        stairsBlock(((StairBlock) ModBlocks.OPAL_STAIRS.get()), blockTexture(ModBlocks.OPAL_BLOCK.get()));
+        slabBlock(((SlabBlock) ModBlocks.OPAL_SLAB.get()), blockTexture(ModBlocks.OPAL_BLOCK.get()), blockTexture(ModBlocks.OPAL_BLOCK.get()));
     }
 
 

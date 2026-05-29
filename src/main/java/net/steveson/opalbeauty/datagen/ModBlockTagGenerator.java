@@ -19,20 +19,29 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
-                ModBlocks.OPAL_BLOCK.get()
-
+                ModBlocks.OPAL_ORE.get(),
+                ModBlocks.DEEPSLATE_OPAL_ORE.get(),
+                ModBlocks.END_OPAL_ORE.get(),
+                ModBlocks.OPAL_BLOCK.get(),
+                ModBlocks.OPAL_STAIRS.get(),
+                ModBlocks.OPAL_SLAB.get()
         );
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL).add(
-                ModBlocks.OPAL_BLOCK.get()
+                ModBlocks.OPAL_ORE.get(),
+                ModBlocks.DEEPSLATE_OPAL_ORE.get(),
+                ModBlocks.END_OPAL_ORE.get(),
+                ModBlocks.OPAL_BLOCK.get(),
+                ModBlocks.OPAL_STAIRS.get(),
+                ModBlocks.OPAL_SLAB.get()
         );
 
 
-//        this.tag(BlockTags.STAIRS).add(
-//                ModBlocks.COAL_STAIRS.get()
-//        );
-//        this.tag(BlockTags.SLABS).add(
-//                ModBlocks.COAL_SLAB.get()
-//        );
+        this.tag(BlockTags.STAIRS).add(
+                ModBlocks.OPAL_STAIRS.get()
+        );
+        this.tag(BlockTags.SLABS).add(
+                ModBlocks.OPAL_SLAB.get()
+        );
     }
 }

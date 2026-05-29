@@ -52,8 +52,13 @@ public class BeautifulOpalMod
 
 
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.OPAL_ORE);
+            event.accept(ModBlocks.DEEPSLATE_OPAL_ORE);
+            event.accept(ModBlocks.END_OPAL_ORE);
             event.accept(ModBlocks.OPAL_BLOCK);
-//            event.accept(ModBlocks.REDSTONE_SLAB);
+            event.accept(ModBlocks.OPAL_STAIRS);
+            event.accept(ModBlocks.OPAL_SLAB);
+            event.accept(ModItems.OPAL);
         }
 
 
