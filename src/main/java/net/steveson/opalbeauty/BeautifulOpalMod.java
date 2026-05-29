@@ -14,6 +14,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.steveson.opalbeauty.block.ModBlocks;
+import net.steveson.opalbeauty.item.ModCreativeModeTabs;
 import net.steveson.opalbeauty.item.ModItems;
 import org.slf4j.Logger;
 
@@ -28,6 +29,8 @@ public class BeautifulOpalMod
     public BeautifulOpalMod(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
@@ -49,18 +52,6 @@ public class BeautifulOpalMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
-
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.OPAL_ORE);
-            event.accept(ModBlocks.DEEPSLATE_OPAL_ORE);
-            event.accept(ModBlocks.END_OPAL_ORE);
-            event.accept(ModBlocks.OPAL_BLOCK);
-            event.accept(ModBlocks.OPAL_STAIRS);
-            event.accept(ModBlocks.OPAL_SLAB);
-            event.accept(ModItems.OPAL);
-        }
-
 
     }
 

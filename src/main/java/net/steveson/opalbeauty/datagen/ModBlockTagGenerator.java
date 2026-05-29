@@ -7,6 +7,7 @@ import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.steveson.opalbeauty.BeautifulOpalMod;
 import net.steveson.opalbeauty.block.ModBlocks;
+import net.steveson.opalbeauty.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -26,7 +27,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.OPAL_STAIRS.get(),
                 ModBlocks.OPAL_SLAB.get()
         );
-
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL).add(
                 ModBlocks.OPAL_ORE.get(),
                 ModBlocks.DEEPSLATE_OPAL_ORE.get(),
@@ -36,12 +36,40 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.OPAL_SLAB.get()
         );
 
-
         this.tag(BlockTags.STAIRS).add(
                 ModBlocks.OPAL_STAIRS.get()
         );
         this.tag(BlockTags.SLABS).add(
                 ModBlocks.OPAL_SLAB.get()
+        );
+
+
+
+        this.tag(ModTags.Blocks.STORAGE_BLOCKS_OPAL).add(
+                ModBlocks.OPAL_BLOCK.get()
+        );
+        this.tag(ModTags.Blocks.ORES_OPAL).add(
+                ModBlocks.OPAL_ORE.get(),
+                ModBlocks.DEEPSLATE_OPAL_ORE.get(),
+                ModBlocks.END_OPAL_ORE.get()
+        );
+        this.tag(ModTags.Blocks.ORES).add(
+                ModBlocks.OPAL_ORE.get(),
+                ModBlocks.DEEPSLATE_OPAL_ORE.get(),
+                ModBlocks.END_OPAL_ORE.get()
+        );
+        this.tag(ModTags.Blocks.ORES_IN_STONE).add(
+                ModBlocks.OPAL_ORE.get()
+        );
+        this.tag(ModTags.Blocks.ORES_IN_DEEPSLATE).add(
+                ModBlocks.DEEPSLATE_OPAL_ORE.get()
+        );
+
+
+        this.tag(ModTags.Blocks.ORE_RATES_SINGULAR).add(
+                ModBlocks.OPAL_ORE.get(),
+                ModBlocks.DEEPSLATE_OPAL_ORE.get(),
+                ModBlocks.END_OPAL_ORE.get()
         );
     }
 }
