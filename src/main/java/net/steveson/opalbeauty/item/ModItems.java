@@ -26,6 +26,15 @@ public class ModItems {
     public static final RegistryObject<Item> OPAL_HOE = ITEMS.register("opal_hoe",
             ()-> new HoeItem(ModToolTiers.OPAL, -3, 1f,  new Item.Properties()));
 
+    public static final RegistryObject<Item> OPAL_HELMET = ITEMS.register("opal_helmet",
+            ()-> new ArmorItem(ModArmorMaterials.OPAL, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> OPAL_CHESTPLATE = ITEMS.register("opal_chestplate",
+            ()-> new ArmorItem(ModArmorMaterials.OPAL, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> OPAL_LEGGINGS = ITEMS.register("opal_leggings",
+            ()-> new ArmorItem(ModArmorMaterials.OPAL, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> OPAL_BOOTS = ITEMS.register("opal_boots",
+            ()-> new ArmorItem(ModArmorMaterials.OPAL, ArmorItem.Type.BOOTS, new Item.Properties()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

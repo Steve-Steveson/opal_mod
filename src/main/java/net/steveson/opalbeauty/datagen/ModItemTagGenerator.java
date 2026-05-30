@@ -29,6 +29,51 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         );
 
 
+        this.tag(ItemTags.SWORDS).add(
+                ModItems.OPAL_SWORD.get()
+        );
+        this.tag(ItemTags.PICKAXES).add(
+                ModItems.OPAL_PICKAXE.get()
+        );
+        this.tag(ItemTags.AXES).add(
+                ModItems.OPAL_AXE.get()
+        );
+        this.tag(ItemTags.SHOVELS).add(
+                ModItems.OPAL_SHOVEL.get()
+        );
+        this.tag(ItemTags.HOES).add(
+                ModItems.OPAL_HOE.get()
+        );
+
+        this.tag(ItemTags.TRIMMABLE_ARMOR).add(
+                ModItems.OPAL_HELMET.get(),
+                ModItems.OPAL_CHESTPLATE.get(),
+                ModItems.OPAL_LEGGINGS.get(),
+                ModItems.OPAL_BOOTS.get()
+        );
+
+
+
+        this.tag(ModTags.Items.ARMORS).add(
+                ModItems.OPAL_HELMET.get(),
+                ModItems.OPAL_CHESTPLATE.get(),
+                ModItems.OPAL_LEGGINGS.get(),
+                ModItems.OPAL_BOOTS.get()
+        );
+        this.tag(ModTags.Items.HELMETS).add(
+                ModItems.OPAL_HELMET.get()
+        );
+        this.tag(ModTags.Items.CHESTPLATES).add(
+                ModItems.OPAL_CHESTPLATE.get()
+        );
+        this.tag(ModTags.Items.LEGGINGS).add(
+                ModItems.OPAL_LEGGINGS.get()
+        );
+        this.tag(ModTags.Items.BOOTS).add(
+                ModItems.OPAL_BOOTS.get()
+        );
+
+
         this.tag(ModTags.Items.STORAGE_BLOCKS_OPAL).add(
                 ModBlocks.OPAL_BLOCK.get().asItem()
         );

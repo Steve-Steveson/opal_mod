@@ -4,14 +4,21 @@
   "block.beautiful_opals.opal_ore": "Opal Ore",
   "block.beautiful_opals.deepslate_opal_ore": "Deepslate Opal Ore",
   "block.beautiful_opals.end_opal_ore": "End Opal Ore",
+
   "block.beautiful_opals.opal_block": "Block of Opal",
   "block.beautiful_opals.opal_stairs": "Opal Stairs",
   "block.beautiful_opals.opal_slab": "Opal Slab",
+
   "item.beautiful_opals.opal": "Opal",
+
   "item.beautiful_opals.opal_sword": "Opal Sword",
   "item.beautiful_opals.opal_pickaxe": "Opal Pickaxe",
   "item.beautiful_opals.opal_axe": "Opal Axe",
   "item.beautiful_opals.opal_shovel": "Opal Shovel",
-  "item.beautiful_opals.opal_hoe": "Opal Hoe"
+  "item.beautiful_opals.opal_hoe": "Opal Hoe",
 
+  "item.beautiful_opals.opal_helmet": "Opal Helmet",
+  "item.beautiful_opals.opal_chestplate": "Opal Chestplate",
+  "item.beautiful_opals.opal_leggings": "Opal Leggings",
+  "item.beautiful_opals.opal_boots": "Opal Boots"
 }

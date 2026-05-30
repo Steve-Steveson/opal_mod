@@ -37,6 +37,12 @@ public class ModTags {
         public static final TagKey<Item> ORE_RATES_SINGULAR = commonTag("ore_rates/singular");
 
 
+        public static final TagKey<Item> ARMORS = commonTag("armors");
+        public static final TagKey<Item> HELMETS = commonTag("armors/helmets");
+        public static final TagKey<Item> CHESTPLATES = commonTag("armors/chestplates");
+        public static final TagKey<Item> LEGGINGS = commonTag("armors/leggings");
+        public static final TagKey<Item> BOOTS = commonTag("armors/boots");
+
         public static final TagKey<Item> STICKS = commonTag("rods/wooden");
 
 

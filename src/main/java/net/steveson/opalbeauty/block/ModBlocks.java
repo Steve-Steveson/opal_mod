@@ -26,7 +26,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> DEEPSLATE_OPAL_ORE = registerBlock("deepslate_opal_ore",
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_LAPIS_ORE)));
     public static final RegistryObject<Block> END_OPAL_ORE = registerBlock("end_opal_ore",
-            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.LAPIS_ORE)));
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_LAPIS_ORE)));
 
     public static final RegistryObject<Block> OPAL_BLOCK = registerBlock("opal_block",
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.LAPIS_BLOCK)));

@@ -109,6 +109,36 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.OPAL.get()), has(ModTags.Items.GEMS_OPAL))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.OPAL_HELMET.get())
+                .pattern("OOO")
+                .pattern("O O")
+                .define('O', ModTags.Items.GEMS_OPAL)
+                .unlockedBy(getHasName(ModItems.OPAL.get()), has(ModTags.Items.GEMS_OPAL))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.OPAL_CHESTPLATE.get())
+                .pattern("O O")
+                .pattern("OOO")
+                .pattern("OOO")
+                .define('O', ModTags.Items.GEMS_OPAL)
+                .unlockedBy(getHasName(ModItems.OPAL.get()), has(ModTags.Items.GEMS_OPAL))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.OPAL_LEGGINGS.get())
+                .pattern("OOO")
+                .pattern("O O")
+                .pattern("O O")
+                .define('O', ModTags.Items.GEMS_OPAL)
+                .unlockedBy(getHasName(ModItems.OPAL.get()), has(ModTags.Items.GEMS_OPAL))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.OPAL_BOOTS.get())
+                .pattern("O O")
+                .pattern("O O")
+                .define('O', ModTags.Items.GEMS_OPAL)
+                .unlockedBy(getHasName(ModItems.OPAL.get()), has(ModTags.Items.GEMS_OPAL))
+                .save(consumer);
+
 
 //        oreBlasting(consumer, ModTags.Items.ORES_OPAL, RecipeCategory.MISC, ModItems.OPAL.get(), 0.1f, 100, "opal");
     }

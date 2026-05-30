@@ -30,6 +30,10 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.OPAL_AXE.get());
                         pOutput.accept(ModItems.OPAL_SHOVEL.get());
                         pOutput.accept(ModItems.OPAL_HOE.get());
+                        pOutput.accept(ModItems.OPAL_HELMET.get());
+                        pOutput.accept(ModItems.OPAL_CHESTPLATE.get());
+                        pOutput.accept(ModItems.OPAL_LEGGINGS.get());
+                        pOutput.accept(ModItems.OPAL_BOOTS.get());
                     })
                     .build());
 
