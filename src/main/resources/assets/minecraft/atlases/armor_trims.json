@@ -38,7 +38,8 @@
       ],
       "palette_key": "trims/color_palettes/trim_palette",
       "permutations": {
-        "opal": "beautiful_opals:trims/color_palettes/opal"
+        "opal": "beautiful_opals:trims/color_palettes/opal",
+        "opal_darker": "beautiful_opals:trims/color_palettes/opal_darker"
       }
     }
   ]
