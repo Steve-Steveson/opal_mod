@@ -18,6 +18,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.steveson.opalbeauty.BeautifulOpalMod;
 import net.steveson.opalbeauty.block.ModBlocks;
 import net.steveson.opalbeauty.item.ModItems;
+import net.steveson.opalbeauty.trim.ModTrimMaterials;
 
 import java.util.LinkedHashMap;
 
@@ -33,7 +34,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimMaterials.put(TrimMaterials.EMERALD, 0.7F);
         trimMaterials.put(TrimMaterials.DIAMOND, 0.8F);
         trimMaterials.put(TrimMaterials.LAPIS, 0.9F);
-//        trimMaterials.put(TrimMaterials.OPAL, 0.91F);
+        trimMaterials.put(ModTrimMaterials.OPAL, 0.91F);
         trimMaterials.put(TrimMaterials.AMETHYST, 1.0F);
     }
 
