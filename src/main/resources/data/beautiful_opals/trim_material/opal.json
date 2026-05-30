@@ -1,0 +1,12 @@
+{
+  "asset_name": "opal",
+  "description": {
+    "color": "#D6B6F7",
+    "translate": "trim_material.beautiful_opals.opal"
+  },
+  "ingredient": "beautiful_opals:opal",
+  "item_model_index": 9.1,
+  "override_armor_materials": {
+    "opal": "opal_darker"
+  }
+}

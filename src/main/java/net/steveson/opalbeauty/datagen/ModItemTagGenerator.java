@@ -29,6 +29,10 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         );
 
 
+        this.tag(ItemTags.TRIM_MATERIALS).add(
+                ModItems.OPAL.get()
+        );
+
         this.tag(ItemTags.SWORDS).add(
                 ModItems.OPAL_SWORD.get()
         );
