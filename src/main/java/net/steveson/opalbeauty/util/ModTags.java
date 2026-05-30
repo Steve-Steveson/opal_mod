@@ -17,6 +17,8 @@ public class ModTags {
         public static final TagKey<Block> ORES_IN_DEEPSLATE = commonTag("ores_in_ground/deepslate");
         public static final TagKey<Block> ORE_RATES_SINGULAR = commonTag("ore_rates/singular");
 
+
+
         private static TagKey<Block> commonTag(String name) {
             return BlockTags.create(new ResourceLocation("forge", name));
         }
@@ -33,6 +35,11 @@ public class ModTags {
         public static final TagKey<Item> ORES_IN_STONE = commonTag("ores_in_ground/stone");
         public static final TagKey<Item> ORES_IN_DEEPSLATE = commonTag("ores_in_ground/deepslate");
         public static final TagKey<Item> ORE_RATES_SINGULAR = commonTag("ore_rates/singular");
+
+
+        public static final TagKey<Item> STICKS = commonTag("rods/wooden");
+
+
 
         private static TagKey<Item> commonTag(String name) {
             return ItemTags.create(new ResourceLocation("forge", name));

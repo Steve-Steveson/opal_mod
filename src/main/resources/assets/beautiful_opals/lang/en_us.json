@@ -7,7 +7,11 @@
   "block.beautiful_opals.opal_block": "Block of Opal",
   "block.beautiful_opals.opal_stairs": "Opal Stairs",
   "block.beautiful_opals.opal_slab": "Opal Slab",
-  "item.beautiful_opals.opal": "Opal"
-
+  "item.beautiful_opals.opal": "Opal",
+  "item.beautiful_opals.opal_sword": "Opal Sword",
+  "item.beautiful_opals.opal_pickaxe": "Opal Pickaxe",
+  "item.beautiful_opals.opal_axe": "Opal Axe",
+  "item.beautiful_opals.opal_shovel": "Opal Shovel",
+  "item.beautiful_opals.opal_hoe": "Opal Hoe"
 
 }

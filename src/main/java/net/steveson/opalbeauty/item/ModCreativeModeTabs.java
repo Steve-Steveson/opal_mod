@@ -25,6 +25,11 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.OPAL_STAIRS.get());
                         pOutput.accept(ModBlocks.OPAL_SLAB.get());
                         pOutput.accept(ModItems.OPAL.get());
+                        pOutput.accept(ModItems.OPAL_SWORD.get());
+                        pOutput.accept(ModItems.OPAL_PICKAXE.get());
+                        pOutput.accept(ModItems.OPAL_AXE.get());
+                        pOutput.accept(ModItems.OPAL_SHOVEL.get());
+                        pOutput.accept(ModItems.OPAL_HOE.get());
                     })
                     .build());
 

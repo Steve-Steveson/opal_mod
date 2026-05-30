@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "O": {
+      "tag": "forge:gems/opal"
+    },
+    "S": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "pattern": [
+    "OO",
+    " S",
+    " S"
+  ],
+  "result": {
+    "item": "beautiful_opals:opal_hoe"
+  },
+  "show_notification": true
+}

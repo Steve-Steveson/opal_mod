@@ -64,6 +64,50 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.OPAL_SWORD.get())
+                .pattern("O")
+                .pattern("O")
+                .pattern("S")
+                .define('O', ModTags.Items.GEMS_OPAL)
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.OPAL.get()), has(ModTags.Items.GEMS_OPAL))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.OPAL_PICKAXE.get())
+                .pattern("OOO")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('O', ModTags.Items.GEMS_OPAL)
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.OPAL.get()), has(ModTags.Items.GEMS_OPAL))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.OPAL_AXE.get())
+                .pattern("OO")
+                .pattern("OS")
+                .pattern(" S")
+                .define('O', ModTags.Items.GEMS_OPAL)
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.OPAL.get()), has(ModTags.Items.GEMS_OPAL))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.OPAL_SHOVEL.get())
+                .pattern("O")
+                .pattern("S")
+                .pattern("S")
+                .define('O', ModTags.Items.GEMS_OPAL)
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.OPAL.get()), has(ModTags.Items.GEMS_OPAL))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.OPAL_HOE.get())
+                .pattern("OO")
+                .pattern(" S")
+                .pattern(" S")
+                .define('O', ModTags.Items.GEMS_OPAL)
+                .define('S', ModTags.Items.STICKS)
+                .unlockedBy(getHasName(ModItems.OPAL.get()), has(ModTags.Items.GEMS_OPAL))
+                .save(consumer);
 
 
 //        oreBlasting(consumer, ModTags.Items.ORES_OPAL, RecipeCategory.MISC, ModItems.OPAL.get(), 0.1f, 100, "opal");

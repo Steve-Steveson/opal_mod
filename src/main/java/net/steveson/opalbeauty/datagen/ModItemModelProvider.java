@@ -21,6 +21,13 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItems.OPAL);
+
+        handheldItem(ModItems.OPAL_SWORD);
+        handheldItem(ModItems.OPAL_PICKAXE);
+        handheldItem(ModItems.OPAL_AXE);
+        handheldItem(ModItems.OPAL_SHOVEL);
+        handheldItem(ModItems.OPAL_HOE);
+
         evenSimplerBlockItem(ModBlocks.OPAL_STAIRS);
         evenSimplerBlockItem(ModBlocks.OPAL_SLAB);
     }
@@ -30,6 +37,12 @@ public class ModItemModelProvider extends ItemModelProvider {
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(BeautifulOpalMod.MOD_ID, "item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
                 new ResourceLocation(BeautifulOpalMod.MOD_ID, "item/" + item.getId().getPath()));
     }
 
