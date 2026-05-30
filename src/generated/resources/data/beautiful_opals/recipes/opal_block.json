@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "O": {
+      "tag": "forge:gems/opal"
+    }
+  },
+  "pattern": [
+    "OOO",
+    "OOO",
+    "OOO"
+  ],
+  "result": {
+    "item": "beautiful_opals:opal_block"
+  },
+  "show_notification": true
+}

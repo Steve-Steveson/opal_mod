@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "O": {
+      "tag": "forge:storage_blocks/opal"
+    }
+  },
+  "pattern": [
+    "OOO"
+  ],
+  "result": {
+    "count": 6,
+    "item": "beautiful_opals:opal_slab"
+  },
+  "show_notification": true
+}
