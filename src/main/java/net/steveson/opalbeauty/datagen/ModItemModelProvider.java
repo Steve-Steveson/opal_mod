@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraft.world.level.block.Block;
@@ -61,6 +62,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.OPAL_LEGGINGS);
         trimmedArmorItem(ModItems.OPAL_BOOTS);
 
+        trimmedVanillaArmorItem(Items.TURTLE_HELMET);
+
 
     }
 
@@ -75,6 +78,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
                 ResourceKey<TrimMaterial> trimMaterial = entry.getKey();
                 float trimValue = entry.getValue();
+
+//                boolean isVanilla = (trimValue * 1000) % 100 == 0;
+
 
                 String armorType = switch (armorItem.getEquipmentSlot()) {
                     case HEAD -> "helmet";
@@ -95,6 +101,12 @@ public class ModItemModelProvider extends ItemModelProvider {
 //                System.out.println("MY MAT IS " + armorMatNameSplit[1]);
 //                System.out.println("MY TRIM IS " + trimMaterial.location().getPath());
 //                System.out.println(overrideDarker);
+
+
+//                System.out.println(trimValue);
+//                System.out.println((trimValue * 1000) % 100);
+//                System.out.println(isVanilla);
+
 
                 if (overrideDarker){
                     trimPath = trimPath + "_darker";
@@ -125,6 +137,80 @@ public class ModItemModelProvider extends ItemModelProvider {
                         .texture("layer0",
                                 new ResourceLocation(MOD_ID,
                                         "item/" + itemRegistryObject.getId().getPath()));
+            });
+        }
+    }
+
+
+
+    // Shoutout to El_Redstoniano for making this
+    private void trimmedVanillaArmorItem(Item itemRegistryObject) {
+        final String MOD_ID = BeautifulOpalMod.MOD_ID; // Change this to your mod id
+
+        if(itemRegistryObject instanceof ArmorItem armorItem) {
+            trimMaterials.entrySet().forEach(entry -> {
+
+                ResourceKey<TrimMaterial> trimMaterial = entry.getKey();
+                float trimValue = entry.getValue();
+
+                boolean isVanilla = (trimValue * 1000) % 100 == 0;
+
+                String armorType = switch (armorItem.getEquipmentSlot()) {
+                    case HEAD -> "helmet";
+                    case CHEST -> "chestplate";
+                    case LEGS -> "leggings";
+                    case FEET -> "boots";
+                    default -> "";
+                };
+
+                String armorItemPath = "item/" + armorItem;
+                String trimPath = "trims/items/" + armorType + "_trim_" + trimMaterial.location().getPath();
+                String currentTrimName = armorItemPath + "_" + trimMaterial.location().getPath() + "_trim";
+
+
+                String[] armorMatNameSplit = armorItem.getMaterial().getName().split(":");
+                boolean overrideDarker = armorMatNameSplit.length == 2 && armorMatNameSplit[1].equalsIgnoreCase(trimMaterial.location().getPath());
+
+//                System.out.println("MY MAT IS " + armorMatNameSplit[1]);
+//                System.out.println("MY TRIM IS " + trimMaterial.location().getPath());
+//                System.out.println(overrideDarker);
+
+                if (overrideDarker){
+                    trimPath = trimPath + "_darker";
+                    currentTrimName = currentTrimName + "_darker";
+                }
+
+
+                ResourceLocation armorItemResLoc = new ResourceLocation(armorItemPath);
+                ResourceLocation trimResLoc = new ResourceLocation(trimPath); // minecraft namespace
+                ResourceLocation trimNameResLoc = new ResourceLocation(MOD_ID, currentTrimName);
+
+                ResourceLocation itemRL = ForgeRegistries.ITEMS.getKey(itemRegistryObject);
+                if(isVanilla) {
+                    trimNameResLoc = new ResourceLocation(currentTrimName);
+                }
+
+
+                // This is used for making the ExistingFileHelper acknowledge that this texture exist, so this will
+                // avoid an IllegalArgumentException
+                existingFileHelper.trackGenerated(trimResLoc, PackType.CLIENT_RESOURCES, ".png", "textures");
+
+                // Trimmed armorItem files
+                if(!isVanilla) {
+                    getBuilder(currentTrimName)
+                            .parent(new ModelFile.UncheckedModelFile("item/generated"))
+                            .texture("layer0", armorItemResLoc)
+                            .texture("layer1", trimResLoc);
+                }
+
+                // Non-trimmed armorItem file (normal variant)
+                this.withExistingParent(itemRL.getPath(),
+                                mcLoc("item/generated"))
+                        .override()
+                        .model(new ModelFile.UncheckedModelFile(trimNameResLoc))
+                        .predicate(mcLoc("trim_type"), trimValue).end()
+                        .texture("layer0",
+                                new ResourceLocation("item/" + itemRL.getPath()));
             });
         }
     }
