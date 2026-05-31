@@ -145,7 +145,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     // Shoutout to El_Redstoniano for making this
     private void trimmedVanillaArmorItem(Item itemRegistryObject) {
-        final String MOD_ID = BeautifulOpalMod.MOD_ID; // Change this to your mod id
+//        final String MOD_ID = BeautifulOpalMod.MOD_ID; // Change this to your mod id
 
         if(itemRegistryObject instanceof ArmorItem armorItem) {
             trimMaterials.entrySet().forEach(entry -> {
@@ -183,12 +183,12 @@ public class ModItemModelProvider extends ItemModelProvider {
 
                 ResourceLocation armorItemResLoc = new ResourceLocation(armorItemPath);
                 ResourceLocation trimResLoc = new ResourceLocation(trimPath); // minecraft namespace
-                ResourceLocation trimNameResLoc = new ResourceLocation(MOD_ID, currentTrimName);
-
-                ResourceLocation itemRL = ForgeRegistries.ITEMS.getKey(itemRegistryObject);
-                if(isVanilla) {
-                    trimNameResLoc = new ResourceLocation(currentTrimName);
-                }
+//                ResourceLocation trimNameResLoc = new ResourceLocation(MOD_ID, currentTrimName);
+//
+//                ResourceLocation itemRL = ForgeRegistries.ITEMS.getKey(itemRegistryObject);
+//                if(isVanilla) {
+//                    trimNameResLoc = new ResourceLocation(currentTrimName);
+//                }
 
 
                 // This is used for making the ExistingFileHelper acknowledge that this texture exist, so this will
@@ -203,14 +203,14 @@ public class ModItemModelProvider extends ItemModelProvider {
                             .texture("layer1", trimResLoc);
                 }
 
-                // Non-trimmed armorItem file (normal variant)
-                this.withExistingParent(itemRL.getPath(),
-                                mcLoc("item/generated"))
-                        .override()
-                        .model(new ModelFile.UncheckedModelFile(trimNameResLoc))
-                        .predicate(mcLoc("trim_type"), trimValue).end()
-                        .texture("layer0",
-                                new ResourceLocation("item/" + itemRL.getPath()));
+//                // Non-trimmed armorItem file (normal variant)
+//                this.withExistingParent(itemRL.getPath(),
+//                                mcLoc("item/generated"))
+//                        .override()
+//                        .model(new ModelFile.UncheckedModelFile(trimNameResLoc))
+//                        .predicate(mcLoc("trim_type"), trimValue).end()
+//                        .texture("layer0",
+//                                new ResourceLocation("item/" + itemRL.getPath()));
             });
         }
     }
