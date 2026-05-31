@@ -87,6 +87,21 @@ public class ModItemModelProvider extends ItemModelProvider {
                 String armorItemPath = "item/" + armorItem;
                 String trimPath = "trims/items/" + armorType + "_trim_" + trimMaterial.location().getPath();
                 String currentTrimName = armorItemPath + "_" + trimMaterial.location().getPath() + "_trim";
+
+
+                String[] armorMatNameSplit = armorItem.getMaterial().getName().split(":");
+                boolean overrideDarker = armorMatNameSplit.length == 2 && armorMatNameSplit[1].equalsIgnoreCase(trimMaterial.location().getPath());
+
+//                System.out.println("MY MAT IS " + armorMatNameSplit[1]);
+//                System.out.println("MY TRIM IS " + trimMaterial.location().getPath());
+//                System.out.println(overrideDarker);
+
+                if (overrideDarker){
+                    trimPath = trimPath + "_darker";
+                    currentTrimName = currentTrimName + "_darker";
+                }
+
+
                 ResourceLocation armorItemResLoc = new ResourceLocation(MOD_ID, armorItemPath);
                 ResourceLocation trimResLoc = new ResourceLocation(trimPath); // minecraft namespace
                 ResourceLocation trimNameResLoc = new ResourceLocation(MOD_ID, currentTrimName);
