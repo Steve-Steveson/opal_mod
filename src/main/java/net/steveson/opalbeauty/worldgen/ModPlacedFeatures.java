@@ -18,6 +18,7 @@ import java.util.List;
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> OPAL_ORE_PLACED_KEY = registerKey("opal_ore_placed");
     public static final ResourceKey<PlacedFeature> END_OPAL_ORE_PLACED_KEY = registerKey("end_opal_ore_placed");
+    public static final ResourceKey<PlacedFeature> END_OPAL_ORE_LOWER_PLACED_KEY = registerKey("end_opal_ore_lower_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -27,8 +28,11 @@ public class ModPlacedFeatures {
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-16), VerticalAnchor.absolute(16))));
 
         register(context, END_OPAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_OPAL_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(16,
+                ModOrePlacement.commonOrePlacement(12,
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(64))));
+        register(context, END_OPAL_ORE_LOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_OPAL_ORE_LOWER_KEY),
+                ModOrePlacement.commonOrePlacement(24,
+                        HeightRangePlacement.triangle(VerticalAnchor.absolute(-36), VerticalAnchor.absolute(36))));
 
 
     }

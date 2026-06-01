@@ -15,6 +15,7 @@ import net.steveson.opalbeauty.BeautifulOpalMod;
 public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_OPAL_ORE = registerKey("add_opal_ore");
     public static final ResourceKey<BiomeModifier> ADD_END_OPAL_ORE = registerKey("add_end_opal_ore");
+    public static final ResourceKey<BiomeModifier> ADD_END_OPAL_ORE_LOWER = registerKey("add_end_opal_ore_lower");
 
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
@@ -29,6 +30,11 @@ public class ModBiomeModifiers {
         context.register(ADD_END_OPAL_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.HAS_END_CITY),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_OPAL_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_END_OPAL_ORE_LOWER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_OPAL_ORE_LOWER_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
     }

@@ -5,6 +5,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.armortrim.TrimMaterial;
@@ -198,10 +199,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 //                System.out.println("MY TRIM IS " + trimMaterial.location().getPath());
 //                System.out.println(overrideDarker);
 
-                if (overrideDarker){
-                    trimPath = trimPath + "_darker";
-                    currentTrimName = currentTrimName + "_darker";
-                }
+//                if (overrideDarker){
+//                    trimPath = trimPath + "_darker";
+//                    currentTrimName = currentTrimName + "_darker";
+//                }
 
 
                 ResourceLocation armorItemResLoc = new ResourceLocation(armorItemPath);
@@ -220,10 +221,19 @@ public class ModItemModelProvider extends ItemModelProvider {
 
                 // Trimmed armorItem files
                 if(!isVanilla) {
-                    getBuilder(currentTrimName)
-                            .parent(new ModelFile.UncheckedModelFile("item/generated"))
-                            .texture("layer0", armorItemResLoc)
-                            .texture("layer1", trimResLoc);
+                    if(armorItem.getMaterial() == ArmorMaterials.LEATHER) {
+                        getBuilder(currentTrimName)
+                                .parent(new ModelFile.UncheckedModelFile("item/generated"))
+                                .texture("layer0", armorItemResLoc)
+                                .texture("layer1", armorItemResLoc + "_overlay")
+                                .texture("layer2", trimResLoc);
+                    }
+                    else {
+                        getBuilder(currentTrimName)
+                                .parent(new ModelFile.UncheckedModelFile("item/generated"))
+                                .texture("layer0", armorItemResLoc)
+                                .texture("layer1", trimResLoc);
+                    }
                 }
 
 //                // Non-trimmed armorItem file (normal variant)

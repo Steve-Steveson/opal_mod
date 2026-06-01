@@ -5,6 +5,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.armortrim.TrimMaterial;
@@ -102,16 +103,24 @@ public class VanillaTrimmedItemModelProvider extends ItemModelProvider {
                 String currentTrimName = armorItemPath + "_" + trimMaterial.location().getPath() + "_trim";
 
 
-                String[] armorMatNameSplit = armorItem.getMaterial().getName().split(":");
-                boolean overrideDarker = armorMatNameSplit.length == 2 && armorMatNameSplit[1].equalsIgnoreCase(trimMaterial.location().getPath());
+//                String[] armorMatNameSplit = armorItem.getMaterial().getName().split(":");
+//                boolean overrideDarker = armorMatNameSplit.length == 2 && armorMatNameSplit[1].equalsIgnoreCase(trimMaterial.location().getPath());
+                boolean overrideDarker = armorItem.getMaterial().getName().equalsIgnoreCase(trimMaterial.location().getPath());
 
-//                System.out.println("MY MAT IS " + armorMatNameSplit[1]);
+
+
+//                System.out.println("MY MAT IS " + armorItem.getMaterial().getName());
+////                System.out.println("MY MAT IS " + armorMatNameSplit[1]);
 //                System.out.println("MY TRIM IS " + trimMaterial.location().getPath());
 //                System.out.println(overrideDarker);
 
+
+
                 if (overrideDarker){
                     trimPath = trimPath + "_darker";
-                    currentTrimName = currentTrimName + "_darker";
+
+                    currentTrimName = armorItemPath + "_" + trimMaterial.location().getPath() + "_darker_trim";
+//                    currentTrimName = currentTrimName + "_darker";
                 }
 
 
@@ -138,13 +147,27 @@ public class VanillaTrimmedItemModelProvider extends ItemModelProvider {
 //                }
 
                 // Non-trimmed armorItem file (normal variant)
-                this.withExistingParent(itemRL.getPath(),
-                                mcLoc("item/generated"))
-                        .override()
-                        .model(new ModelFile.UncheckedModelFile(trimNameResLoc))
-                        .predicate(mcLoc("trim_type"), trimValue).end()
-                        .texture("layer0",
-                                new ResourceLocation("item/" + itemRL.getPath()));
+
+                if(armorItem.getMaterial() == ArmorMaterials.LEATHER) {
+                    this.withExistingParent(itemRL.getPath(),
+                                    mcLoc("item/generated"))
+                            .override()
+                            .model(new ModelFile.UncheckedModelFile(trimNameResLoc))
+                            .predicate(mcLoc("trim_type"), trimValue).end()
+                            .texture("layer0",
+                                    new ResourceLocation("item/" + itemRL.getPath()))
+                            .texture("layer1",
+                                    new ResourceLocation("item/" + itemRL.getPath() + "_overlay"));
+                }
+                else {
+                    this.withExistingParent(itemRL.getPath(),
+                                    mcLoc("item/generated"))
+                            .override()
+                            .model(new ModelFile.UncheckedModelFile(trimNameResLoc))
+                            .predicate(mcLoc("trim_type"), trimValue).end()
+                            .texture("layer0",
+                                    new ResourceLocation("item/" + itemRL.getPath()));
+                }
             });
         }
     }

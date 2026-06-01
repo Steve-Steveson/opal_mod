@@ -21,6 +21,7 @@ import java.util.List;
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_OPAL_ORE_KEY = registerKey("opal_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_OPAL_ORE_KEY = registerKey("end_opal_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> END_OPAL_ORE_LOWER_KEY = registerKey("end_opal_ore_lower");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -34,6 +35,8 @@ public class ModConfiguredFeatures {
         register(context, OVERWORLD_OPAL_ORE_KEY, Feature.ORE, new OreConfiguration(overworldOpalOres, 3, 1.0F));
         register(context, END_OPAL_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceable,
                 ModBlocks.END_OPAL_ORE.get().defaultBlockState(), 7));
+        register(context, END_OPAL_ORE_LOWER_KEY, Feature.ORE, new OreConfiguration(endReplaceable,
+                ModBlocks.END_OPAL_ORE.get().defaultBlockState(), 12));
     }
 
 
