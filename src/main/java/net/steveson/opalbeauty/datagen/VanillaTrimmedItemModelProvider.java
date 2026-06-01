@@ -43,6 +43,31 @@ public class VanillaTrimmedItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         trimmedVanillaArmorItem(Items.TURTLE_HELMET);
+
+        trimmedVanillaArmorItem(Items.LEATHER_HELMET);
+        trimmedVanillaArmorItem(Items.LEATHER_CHESTPLATE);
+        trimmedVanillaArmorItem(Items.LEATHER_LEGGINGS);
+        trimmedVanillaArmorItem(Items.LEATHER_BOOTS);
+        trimmedVanillaArmorItem(Items.CHAINMAIL_HELMET);
+        trimmedVanillaArmorItem(Items.CHAINMAIL_CHESTPLATE);
+        trimmedVanillaArmorItem(Items.CHAINMAIL_LEGGINGS);
+        trimmedVanillaArmorItem(Items.CHAINMAIL_BOOTS);
+        trimmedVanillaArmorItem(Items.IRON_HELMET);
+        trimmedVanillaArmorItem(Items.IRON_CHESTPLATE);
+        trimmedVanillaArmorItem(Items.IRON_LEGGINGS);
+        trimmedVanillaArmorItem(Items.IRON_BOOTS);
+        trimmedVanillaArmorItem(Items.GOLDEN_HELMET);
+        trimmedVanillaArmorItem(Items.GOLDEN_CHESTPLATE);
+        trimmedVanillaArmorItem(Items.GOLDEN_LEGGINGS);
+        trimmedVanillaArmorItem(Items.GOLDEN_BOOTS);
+        trimmedVanillaArmorItem(Items.DIAMOND_HELMET);
+        trimmedVanillaArmorItem(Items.DIAMOND_CHESTPLATE);
+        trimmedVanillaArmorItem(Items.DIAMOND_LEGGINGS);
+        trimmedVanillaArmorItem(Items.DIAMOND_BOOTS);
+        trimmedVanillaArmorItem(Items.NETHERITE_HELMET);
+        trimmedVanillaArmorItem(Items.NETHERITE_CHESTPLATE);
+        trimmedVanillaArmorItem(Items.NETHERITE_LEGGINGS);
+        trimmedVanillaArmorItem(Items.NETHERITE_BOOTS);
     }
 
 
