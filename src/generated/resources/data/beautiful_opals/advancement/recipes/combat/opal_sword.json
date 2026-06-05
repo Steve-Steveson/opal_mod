@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_opal": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:gems/opal"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "beautiful_opals:opal_sword"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_opal"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "beautiful_opals:opal_sword"
+    ]
+  }
+}

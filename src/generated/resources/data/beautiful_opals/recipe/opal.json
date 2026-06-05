@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "c:storage_blocks/opal"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "beautiful_opals:opal"
+  }
+}

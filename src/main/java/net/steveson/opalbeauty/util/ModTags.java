@@ -38,6 +38,11 @@ public class ModTags {
         public static final TagKey<Item> ORES_IN_DEEPSLATE = commonTag("ores_in_ground/deepslate");
         public static final TagKey<Item> ORE_RATES_SINGULAR = commonTag("ore_rates/singular");
 
+//        public static final TagKey<Item> ARMORS = commonTag("armors");
+
+        public static final TagKey<Item> STICKS = commonTag("rods/wooden");
+
+
 
         private static TagKey<Item> commonTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", name));

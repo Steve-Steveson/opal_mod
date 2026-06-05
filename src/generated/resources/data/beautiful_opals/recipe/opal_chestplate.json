@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "O": {
+      "tag": "c:gems/opal"
+    }
+  },
+  "pattern": [
+    "O O",
+    "OOO",
+    "OOO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "beautiful_opals:opal_chestplate"
+  }
+}

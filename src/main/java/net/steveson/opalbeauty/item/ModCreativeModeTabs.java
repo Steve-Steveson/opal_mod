@@ -31,7 +31,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.OPAL_AXE);
                         output.accept(ModItems.OPAL_SHOVEL);
                         output.accept(ModItems.OPAL_HOE);
-
+                        output.accept(ModItems.OPAL_HELMET);
+                        output.accept(ModItems.OPAL_CHESTPLATE);
+                        output.accept(ModItems.OPAL_LEGGINGS);
+                        output.accept(ModItems.OPAL_BOOTS);
                     })
                     .build());
 

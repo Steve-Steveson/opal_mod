@@ -28,6 +28,19 @@ public class ModItems {
             ()-> new HoeItem(ModToolTiers.OPAL, new Item.Properties()
                     .attributes(HoeItem.createAttributes(ModToolTiers.OPAL, -3, 1f))));
 
+    public static final DeferredItem<ArmorItem> OPAL_HELMET = ITEMS.register("opal_helmet",
+            ()-> new ArmorItem(ModArmorMaterials.OPAL_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(40))));
+    public static final DeferredItem<ArmorItem> OPAL_CHESTPLATE = ITEMS.register("opal_chestplate",
+            ()-> new ArmorItem(ModArmorMaterials.OPAL_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(40))));
+    public static final DeferredItem<ArmorItem> OPAL_LEGGINGS = ITEMS.register("opal_leggings",
+            ()-> new ArmorItem(ModArmorMaterials.OPAL_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(40))));
+    public static final DeferredItem<ArmorItem> OPAL_BOOTS = ITEMS.register("opal_boots",
+            ()-> new ArmorItem(ModArmorMaterials.OPAL_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(40))));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

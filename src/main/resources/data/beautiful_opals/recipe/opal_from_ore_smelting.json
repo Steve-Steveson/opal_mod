@@ -3,7 +3,10 @@
   "cookingtime": 200,
   "experience": 3.0,
   "ingredient": {
-    "tag": "forge:ores/opal"
+    "tag": "c:ores/opal"
   },
-  "result": "beautiful_opals:opal"
+  "result": {
+    "count": 1,
+    "id": "beautiful_opals:opal"
+  }
 }

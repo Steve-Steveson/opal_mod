@@ -43,7 +43,19 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(ItemTags.HOES)
                 .add(ModItems.OPAL_HOE.get());
 
-
+        tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.OPAL_HELMET.get())
+                .add(ModItems.OPAL_CHESTPLATE.get())
+                .add(ModItems.OPAL_LEGGINGS.get())
+                .add(ModItems.OPAL_BOOTS.get());
+        tag(ItemTags.HEAD_ARMOR)
+                .add(ModItems.OPAL_HELMET.get());
+        tag(ItemTags.CHEST_ARMOR)
+                .add(ModItems.OPAL_CHESTPLATE.get());
+        tag(ItemTags.LEG_ARMOR)
+                .add(ModItems.OPAL_LEGGINGS.get());
+        tag(ItemTags.FOOT_ARMOR)
+                .add(ModItems.OPAL_BOOTS.get());
 
 
 
