@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "beautiful_opals:block/opal_block",
+    "side": "beautiful_opals:block/opal_block",
+    "top": "beautiful_opals:block/opal_block"
+  }
+}

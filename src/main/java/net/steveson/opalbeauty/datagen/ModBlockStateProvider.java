@@ -16,18 +16,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        blockWithItem(ModBlocks.OPAL_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_OPAL_ORE);
+        blockWithItem(ModBlocks.END_OPAL_ORE);
         blockWithItem(ModBlocks.OPAL_BLOCK);
+        stairsBlock(ModBlocks.OPAL_STAIRS.get(), blockTexture(ModBlocks.OPAL_BLOCK.get()));
+        slabBlock(ModBlocks.OPAL_SLAB.get(), blockTexture(ModBlocks.OPAL_BLOCK.get()), blockTexture(ModBlocks.OPAL_BLOCK.get()));
 
-
-//        stairsBlock(ModBlocks.OPAL_STAIRS.get(), blockTexture(Blocks.COAL_BLOCK));
-//        slabBlock(ModBlocks.OPAL_SLAB.get(), blockTexture(Blocks.COAL_BLOCK), blockTexture(Blocks.COAL_BLOCK));
-//
-//
-//
-//        blockItem(ModBlocks.OPAL_STAIRS);
-//        blockItem(ModBlocks.OPAL_SLAB);
-
-
+        blockItem(ModBlocks.OPAL_STAIRS);
+        blockItem(ModBlocks.OPAL_SLAB);
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

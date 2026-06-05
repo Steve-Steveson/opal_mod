@@ -19,10 +19,12 @@ public class ModCreativeModeTabs {
             ()-> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.OPAL.get()))
                     .title(Component.translatable("creativetab.beautiful_opals.opal_tab"))
                     .displayItems((pParameters, output) -> {
-
+                        output.accept(ModBlocks.OPAL_ORE);
+                        output.accept(ModBlocks.DEEPSLATE_OPAL_ORE);
+                        output.accept(ModBlocks.END_OPAL_ORE);
                         output.accept(ModBlocks.OPAL_BLOCK);
-//                        pOutput.accept(ModBlocks.OPAL_STAIRS);
-//                        pOutput.accept(ModBlocks.OPAL_SLAB);
+                        output.accept(ModBlocks.OPAL_STAIRS);
+                        output.accept(ModBlocks.OPAL_SLAB);
                         output.accept(ModItems.OPAL);
 
                     })

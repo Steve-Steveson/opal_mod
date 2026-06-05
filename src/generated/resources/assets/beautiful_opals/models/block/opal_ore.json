@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "beautiful_opals:block/opal_ore"
+  }
+}
