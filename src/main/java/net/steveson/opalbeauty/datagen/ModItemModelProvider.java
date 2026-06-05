@@ -134,7 +134,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
                 if (overrideDarker){
                     trimPath = trimPath + "_darker";
-                    currentTrimName = currentTrimName + "_darker";
+//                    currentTrimName = currentTrimName + "_darker";
+                    currentTrimName = armorItemPath + "_" + trimMaterial.location().getPath() + "_darker_trim";
                 }
 
 
