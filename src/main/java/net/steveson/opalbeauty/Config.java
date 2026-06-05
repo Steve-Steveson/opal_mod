@@ -1,4 +1,4 @@
-package net.steveson.solidgoldstairs;
+package net.steveson.opalbeauty;
 
 import java.util.List;
 
