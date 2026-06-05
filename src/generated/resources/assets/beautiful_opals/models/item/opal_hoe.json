@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "beautiful_opals:item/opal_hoe"
+  }
+}

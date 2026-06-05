@@ -32,6 +32,17 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(ItemTags.TRIM_MATERIALS)
                 .add(ModItems.OPAL.get());
 
+        tag(ItemTags.SWORDS)
+                .add(ModItems.OPAL_SWORD.get());
+        tag(ItemTags.PICKAXES)
+                .add(ModItems.OPAL_PICKAXE.get());
+        tag(ItemTags.AXES)
+                .add(ModItems.OPAL_AXE.get());
+        tag(ItemTags.SHOVELS)
+                .add(ModItems.OPAL_SHOVEL.get());
+        tag(ItemTags.HOES)
+                .add(ModItems.OPAL_HOE.get());
+
 
 
 
