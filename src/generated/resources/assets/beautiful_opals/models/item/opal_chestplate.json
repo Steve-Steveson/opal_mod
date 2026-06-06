@@ -56,6 +56,12 @@
       }
     },
     {
+      "model": "beautiful_opals:item/opal_chestplate_opal_darker_trim",
+      "predicate": {
+        "minecraft:trim_type": 0.91
+      }
+    },
+    {
       "model": "beautiful_opals:item/opal_chestplate_amethyst_trim",
       "predicate": {
         "minecraft:trim_type": 1.0

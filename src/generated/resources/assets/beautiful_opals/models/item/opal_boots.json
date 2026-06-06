@@ -56,6 +56,12 @@
       }
     },
     {
+      "model": "beautiful_opals:item/opal_boots_opal_darker_trim",
+      "predicate": {
+        "minecraft:trim_type": 0.91
+      }
+    },
+    {
       "model": "beautiful_opals:item/opal_boots_amethyst_trim",
       "predicate": {
         "minecraft:trim_type": 1.0

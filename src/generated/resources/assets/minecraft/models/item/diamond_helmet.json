@@ -2,73 +2,73 @@
   "parent": "minecraft:item/generated",
   "overrides": [
     {
-      "model": "beautiful_opals:item/opal_leggings_quartz_trim",
+      "model": "minecraft:item/diamond_helmet_quartz_trim",
       "predicate": {
         "minecraft:trim_type": 0.1
       }
     },
     {
-      "model": "beautiful_opals:item/opal_leggings_iron_trim",
+      "model": "minecraft:item/diamond_helmet_iron_trim",
       "predicate": {
         "minecraft:trim_type": 0.2
       }
     },
     {
-      "model": "beautiful_opals:item/opal_leggings_netherite_trim",
+      "model": "minecraft:item/diamond_helmet_netherite_trim",
       "predicate": {
         "minecraft:trim_type": 0.3
       }
     },
     {
-      "model": "beautiful_opals:item/opal_leggings_redstone_trim",
+      "model": "minecraft:item/diamond_helmet_redstone_trim",
       "predicate": {
         "minecraft:trim_type": 0.4
       }
     },
     {
-      "model": "beautiful_opals:item/opal_leggings_copper_trim",
+      "model": "minecraft:item/diamond_helmet_copper_trim",
       "predicate": {
         "minecraft:trim_type": 0.5
       }
     },
     {
-      "model": "beautiful_opals:item/opal_leggings_gold_trim",
+      "model": "minecraft:item/diamond_helmet_gold_trim",
       "predicate": {
         "minecraft:trim_type": 0.6
       }
     },
     {
-      "model": "beautiful_opals:item/opal_leggings_emerald_trim",
+      "model": "minecraft:item/diamond_helmet_emerald_trim",
       "predicate": {
         "minecraft:trim_type": 0.7
       }
     },
     {
-      "model": "beautiful_opals:item/opal_leggings_diamond_trim",
+      "model": "minecraft:item/diamond_helmet_diamond_darker_trim",
       "predicate": {
         "minecraft:trim_type": 0.8
       }
     },
     {
-      "model": "beautiful_opals:item/opal_leggings_lapis_trim",
+      "model": "minecraft:item/diamond_helmet_lapis_trim",
       "predicate": {
         "minecraft:trim_type": 0.9
       }
     },
     {
-      "model": "beautiful_opals:item/opal_leggings_opal_darker_trim",
+      "model": "beautiful_opals:item/diamond_helmet_opal_trim",
       "predicate": {
         "minecraft:trim_type": 0.91
       }
     },
     {
-      "model": "beautiful_opals:item/opal_leggings_amethyst_trim",
+      "model": "minecraft:item/diamond_helmet_amethyst_trim",
       "predicate": {
         "minecraft:trim_type": 1.0
       }
     }
   ],
   "textures": {
-    "layer0": "beautiful_opals:item/opal_leggings"
+    "layer0": "minecraft:item/diamond_helmet"
   }
 }
