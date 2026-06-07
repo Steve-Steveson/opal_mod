@@ -11,6 +11,7 @@ public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> ORES_OPAL = commonTag("ores/opal");
         public static final TagKey<Block> STORAGE_BLOCKS_OPAL = commonTag("storage_blocks/opal");
+        public static final TagKey<Block> STORAGE_BLOCKS = commonTag("storage_blocks");
 
         public static final TagKey<Block> ORES = commonTag("ores");
         public static final TagKey<Block> ORES_IN_STONE = commonTag("ores_in_ground/stone");
@@ -30,6 +31,7 @@ public class ModTags {
 
         public static final TagKey<Item> ORES_OPAL = commonTag("ores/opal");
         public static final TagKey<Item> STORAGE_BLOCKS_OPAL = commonTag("storage_blocks/opal");
+        public static final TagKey<Item> STORAGE_BLOCKS = commonTag("storage_blocks");
 
         public static final TagKey<Item> ORES = commonTag("ores");
         public static final TagKey<Item> ORES_IN_STONE = commonTag("ores_in_ground/stone");

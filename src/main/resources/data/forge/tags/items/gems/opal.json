@@ -1,0 +1,9 @@
+{
+  "values": [
+    "beautiful_opals:opal",
+    {
+      "id": "tfc:gem/opal",
+      "required": false
+    }
+  ]
+}

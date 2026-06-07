@@ -36,6 +36,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.OPAL_SLAB.get()
         );
 
+        this.tag(BlockTags.BEACON_BASE_BLOCKS).add(
+                ModBlocks.OPAL_BLOCK.get()
+        );
+
         this.tag(BlockTags.STAIRS).add(
                 ModBlocks.OPAL_STAIRS.get()
         );
@@ -45,6 +49,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
 
 
+        this.tag(ModTags.Blocks.STORAGE_BLOCKS).add(
+                ModBlocks.OPAL_BLOCK.get()
+        );
         this.tag(ModTags.Blocks.STORAGE_BLOCKS_OPAL).add(
                 ModBlocks.OPAL_BLOCK.get()
         );
