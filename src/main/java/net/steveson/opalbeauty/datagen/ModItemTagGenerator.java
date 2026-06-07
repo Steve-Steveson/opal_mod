@@ -29,6 +29,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         );
 
 
+        this.tag(ItemTags.BEACON_PAYMENT_ITEMS).add(
+                ModItems.OPAL.get()
+        );
         this.tag(ItemTags.TRIM_MATERIALS).add(
                 ModItems.OPAL.get()
         );
@@ -78,6 +81,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         );
 
 
+        this.tag(ModTags.Items.STORAGE_BLOCKS).add(
+                ModBlocks.OPAL_BLOCK.get().asItem()
+        );
         this.tag(ModTags.Items.STORAGE_BLOCKS_OPAL).add(
                 ModBlocks.OPAL_BLOCK.get().asItem()
         );
@@ -108,9 +114,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
 
 
-        this.tag(ModTags.Items.GEMS_OPAL).add(
-                ModItems.OPAL.get()
-        );
+//        this.tag(ModTags.Items.GEMS_OPAL).add(
+//                ModItems.OPAL.get()
+//        );
         this.tag(ModTags.Items.GEMS).add(
                 ModItems.OPAL.get()
         );
